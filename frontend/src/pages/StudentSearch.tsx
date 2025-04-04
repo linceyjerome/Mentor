@@ -20,6 +20,7 @@ export default function StudentSearch() {
 
   return (
     <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
+      <h1>Bienvenue dans la page Etudiant</h1>
       <h2 className="text-2xl font-semibold mb-4">Recherche de Mentor</h2>
       <div className="space-y-4">
         <Input
