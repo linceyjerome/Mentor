@@ -4,6 +4,7 @@ import MentorForm from "../pages/MentorRegister";
 import StudentForm from "../pages/StudentSearch";
 import FindMentor from "../pages/FindMentor";
 import StudentRegister from "../pages/StudentRegister";
+import FindStudent from "../pages/FindStudent";
 
 export default function AppRoutes() {
   return (
@@ -14,6 +15,7 @@ export default function AppRoutes() {
         <Route path="/student" element={<StudentForm />} />
         <Route path="/find-mentor" element={<FindMentor />} />
         <Route path="/student-register" element={<StudentRegister />} />
+        <Route path="/find-student" element={<FindStudent />} />
       </Routes>
     </BrowserRouter>
   );

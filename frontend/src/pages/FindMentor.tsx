@@ -21,27 +21,36 @@ export default function FindMentor() {
 
   return (
     <div className="max-w-2xl mx-auto mt-10 space-y-6">
-      <h2 className="text-2xl font-bold text-center">Trouver un mentor</h2>
-      <div className="flex gap-2">
+      <h1>Bienvenue dans la page Etudiant</h1>
+
+      <h2 className="text-3xl font-semibold text-center text-indigo-700">Trouver un mentor</h2>
+      
+      <div className="flex gap-4">
         <Input
           placeholder="Ex: Math, Science, Français"
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
+          className="rounded-md border-2 border-indigo-500 p-3 w-full focus:outline-none focus:ring-2 focus:ring-indigo-600"
         />
-        <Button onClick={handleSearch}>Rechercher</Button>
+        <Button 
+          onClick={handleSearch}
+          className="w-32 bg-indigo-600 text-white hover:bg-indigo-700 rounded-md shadow-md"
+        >
+          Rechercher
+        </Button>
       </div>
 
-      <div className="space-y-4">
+      <div className="space-y-4 mt-8">
         {mentors.length > 0 ? (
           mentors.map((mentor) => (
-            <Card key={mentor.id}>
-              <CardContent className="p-4">
-                <h3 className="text-lg font-semibold">{mentor.name}</h3>
-                <p className="text-sm text-gray-600">{mentor.bio}</p>
-                <p className="mt-1 text-sm">
+            <Card key={mentor.id} className="shadow-lg rounded-lg border border-gray-200">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold text-indigo-700">{mentor.name}</h3>
+                <p className="text-sm text-gray-600 mt-2">{mentor.bio}</p>
+                <p className="text-sm text-indigo-600 mt-2">
                   📚 Matières : {mentor.subjects.join(", ")}
                 </p>
-                <p className="text-sm">⏰ Disponibilité : {mentor.availability}</p>
+                <p className="text-sm text-indigo-600">⏰ Disponibilité : {mentor.availability}</p>
               </CardContent>
             </Card>
           ))
@@ -49,8 +58,13 @@ export default function FindMentor() {
           <p className="text-center text-gray-500">Aucun mentor trouvé pour cette matière.</p>
         )}
       </div>
-       {/* Affichage des mentors ici */}
-       <Link to="/" className="mt-4 px-4 py-2 bg-gray-500 text-white rounded-lg">
+     
+
+      <Link to="/student-register" className="mt-4 block text-center px-4 py-2 bg-blue-600 text-white rounded-lg">
+        inscription Étudiant ✍️
+      </Link>
+
+      <Link to="/" className="mt-4 px-6 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600">
         Retour à l'accueil 🏠
       </Link>
     </div>

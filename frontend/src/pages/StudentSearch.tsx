@@ -47,8 +47,8 @@ export default function StudentSearch() {
         )}
       </div>
       <Link to="/student-register" className="mt-4 block text-center px-4 py-2 bg-blue-600 text-white rounded-lg">
-  Je veux m’inscrire comme étudiant ✍️
-</Link>
+          Je veux m’inscrire comme étudiant ✍️
+      </Link>
 
 
       <Link to="/" className="mt-4 px-4 py-2 bg-gray-500 text-white rounded-lg inline-block">
