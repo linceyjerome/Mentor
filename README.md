@@ -3,7 +3,7 @@ app qui match un mentor avec un etudiant
 
 # installation
 
-npm -i (frontend et backend)
+npm i (frontend et backend)
 
 # Stack technologique
 
